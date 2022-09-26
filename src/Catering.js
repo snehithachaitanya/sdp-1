@@ -16,6 +16,7 @@ import CardActionArea from '@mui/material/CardActionArea'
 import Button from '@mui/material/Button'
 import CardMedia from '@mui/material/CardMedia'
 import Nav from './Nav'
+import { Link } from 'react-router-dom'
   
 export default function Catering() {  
 const mble = [  
@@ -79,7 +80,11 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary">
+                                <Link to="/Payment">
+                                    Buy Now
+                                    </Link>
+                                    </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -108,7 +113,11 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary">
+                                <Link to="/Payment">
+                                    Buy Now
+                                    </Link>
+                                </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -137,7 +146,10 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary"> <Link to="/Payment">
+                                    Buy Now
+                                    </Link>
+                                    </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -166,7 +178,9 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary"> <Link to="/Payment">
+                                    Buy Now
+                                    </Link></Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -195,7 +209,10 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary"> <Link to="/Payment">
+                                    Buy Now
+                                    </Link>
+                                    </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -224,7 +241,10 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary"> <Link to="/Payment">
+                                    Buy Now
+                                    </Link>
+                                    </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -253,7 +273,9 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary"> <Link to="/Payment">
+                                    Buy Now
+                                    </Link></Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -282,7 +304,10 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary"> <Link to="/Payment">
+                                    Buy Now
+                                    </Link>
+                                    </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -311,7 +336,10 @@ const mble = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Buy Now</Button>  
+                                <Button  variant="contained" color="primary"> <Link to="/Payment">
+                                    Buy Now
+                                    </Link>
+                                    </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  

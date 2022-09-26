@@ -1,40 +1,77 @@
-import {Box,Paper} from '@mui/material' 
-import {Stack,TextField,Button} from '@mui/material' 
- 
-export const Pay =() => { 
-    <div> <h3> Payment Info</h3> </div> 
-     return <Box width ='300px'> 
-      <Paper sx ={{padding: '32px'}} elevation ={4}> 
-         
-          <Stack spacing={4}> 
-            <Stack direction='row' spacing={2}> 
-                <TextField label='Credit card number' variant='standard'/></Stack> 
-            <Stack direction='row' spacing={2}></Stack> 
-                <TextField label='cvc' type='password'/> 
-            </Stack> 
-         
-        <TextField label='Year' variant='standard'/><br></br> 
-        Month<br></br> 
-        <select> 
-            <option value="01">01</option> 
-            <option value="02">02</option> 
-            <option value="02">03</option> 
-            <option value="02">04</option> 
-            <option value="02">05</option> 
-            <option value="02">06</option> 
-            <option value="02">07</option> 
-            <option value="02">08</option> 
-            <option value="02">09</option> 
-            <option value="02">10</option> 
-            <option value="02">11</option> 
-            <option value="02">12</option> 
-        </select><br></br> 
-        <Stack spacing={4}> 
-            <Stack direction='row' spacing={2}></Stack> 
-        <Button variant='contained'color='primary'>pay</Button> 
-        </Stack> 
-        
-        </Paper> 
-     </Box> 
-      
-  }
+import React, { useState } from 'react'
+import './App.css'
+
+function loadScript(src) {
+	return new Promise((resolve) => {
+		const script = document.createElement('script')
+		script.src = src
+		script.onload = () => {
+			resolve(true)
+		}
+		script.onerror = () => {
+			resolve(false)
+		}
+		document.body.appendChild(script)
+	})
+}
+
+const __DEV__ = document.domain === 'localhost'
+
+function Pay() {
+	const [name, setName] = useState('snehitha')
+
+	async function displayRazorpay() {
+		const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+
+		if (!res) {
+			alert('Razorpay SDK failed to load. Are you online?')
+			return
+		}
+
+		const data = await fetch('http://localhost:3009/razorpay', { method: 'POST' }).then((t) =>
+			t.json()
+		)
+
+		console.log(data)
+
+		const options = {
+			key: __DEV__ ? 'rzp_test_5RxQaocfhFTitY' : 'PRODUCTION_KEY',
+			currency: data.currency,
+			amount: data.amount.toString(),
+			order_id: data.id,
+			name: 'event payment',
+			description: 'happy event',
+			image: 'http://localhost:3009/kllogo.png',
+			handler: function (response) {
+				alert(response.razorpay_payment_id)
+				alert(response.razorpay_order_id)
+				alert(response.razorpay_signature)
+			},
+			prefill: {
+				name,
+				email: '2100030086@kluniversity.in',
+				phone_number: '9989503256'
+			}
+		}
+		const paymentObject = new window.Razorpay(options)
+		paymentObject.open()
+	}
+
+	return (
+		<div className='pbg'>
+			<header className="App-header">
+				<a
+					onClick={displayRazorpay}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<button>
+					click hear to proceed
+					</button>
+				</a>
+			</header>
+		</div>
+	)
+}
+
+export default Pay

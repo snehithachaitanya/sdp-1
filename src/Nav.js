@@ -62,8 +62,8 @@ const Search = styled('div')(({ theme }) => ({
   }));
   
 
-const pages = ['location', 'theam', 'catering','payment'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['location', 'theme', 'catering','payment'];
+const settings = ['Profile','Logout'];
 
 const Nav = () => {
 
@@ -173,7 +173,7 @@ const Nav = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link style={{textDecoration:'none', color:'Black'}} to={`/${page}`}> 
+                <Link style={{textDecoration:'none', color:'White'}} to={`/${page}`}> 
                     {page} 
                     </Link>
               </Button>
@@ -213,7 +213,11 @@ const Nav = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography textAlign="center">
+                  <Link style={{textDecoration:'none', color:'Black'}} to={`/${setting}`}> 
+                  {setting}
+                  </Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>

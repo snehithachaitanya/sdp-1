@@ -16,6 +16,7 @@ import CardActionArea from '@mui/material/CardActionArea'
 import Button from '@mui/material/Button'
 import CardMedia from '@mui/material/CardMedia'
 import Nav from './Nav'
+import { Link } from 'react-router-dom'
   
 export default function Location() {  
     const res = [  
@@ -82,7 +83,11 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary">
+                                <Link to="/Payment">
+                                    Book Location                                    
+                                </Link>
+                                </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -111,7 +116,9 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary"><Link to="/Payment">
+                                    Book Location                                    
+                                </Link></Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -140,7 +147,9 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary"><Link to="/Payment">
+                                    Book Location                                    
+                                </Link></Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -169,7 +178,9 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary"><Link to="/Payment">
+                                    Book Location                                    
+                                </Link></Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -197,7 +208,10 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary"><Link to="/Payment">
+                                    Book Location                                    
+                                </Link>
+                                </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -226,7 +240,9 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary"><Link to="/Payment">
+                                    Book Location                                    
+                                </Link></Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -255,7 +271,10 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary"><Link to="/Payment">
+                                    Book Location                                    
+                                </Link>
+                                </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -284,7 +303,10 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary"><Link to="/Payment">
+                                    Book Location                                    
+                                </Link>
+                                </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  
@@ -313,7 +335,10 @@ const stu = [
                                 </Typography>  
                             </CardContent>  
                             <CardActionArea>  
-                                <Button  variant="contained" color="primary">Book Location</Button>  
+                                <Button  variant="contained" color="primary"><Link to="/Payment">
+                                    Book Location                                    
+                                </Link>
+                                </Button>  
                             </CardActionArea>  
                         </Card>  
                      </Grid>  

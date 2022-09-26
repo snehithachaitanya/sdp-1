@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -7,21 +7,16 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Nav from './Nav';
+import Paper from '@mui/material/Paper';
 
-const add = (e) =>
-{
-  e.preventDefault();
-  if(this.state.username==="" )
-  {
-    alert("all the fielsd are mandatory");
-    return
-  }
-  console.log(this.state);
-}
 
 function Signin() {
   return (
-        <div style={{ padding: 30 }} >
+    <center>
+        <div className='bg' style={{ padding: 30}} >
+          <h3>SignIn</h3>
+          <Box width ='300px'> 
+          <Paper sx ={{padding: '32px'}} elevation ={4}> 
       <Grid
         container
         spacing={3}
@@ -48,16 +43,16 @@ function Signin() {
           />
         </Grid>
         <Grid item xs={12}>
-        <Button style={{background:"pink"}}>
+        <Button style={{background:"cyan"}}>
         <Link to="/Nav">LOGIN</Link>
         </Button>
         </Grid>
       </Grid>
-
-      <Routes>
-        <Route path="Home" element={<Nav/>}/>
-      </Routes>
+     </Paper>
+     </Box>
+      
     </div>
+    </center>
   )
 }
 
